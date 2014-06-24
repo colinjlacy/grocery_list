@@ -56,7 +56,7 @@
                     }
 
                     $scope.add.items.push(item);
-                    $scope.itemToAdd = "";
+                    $scope.itemToAdd = null;
                     var input = document.getElementById('addInput');
                     input.focus();
                 };
