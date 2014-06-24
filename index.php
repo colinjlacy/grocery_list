@@ -40,7 +40,7 @@ $_SESSION['token'] = md5(uniqid(microtime(), true));
             </ul>
             <div class="tab-content">
                 <div id="login" class="well tab-pane fade in active">
-                    <form method="post" action="user_login.php">
+                    <form method="post" action="dashboard.php">
                         <div class="form-group">
                             <label class="control-label">Username</label>
                             <input type="text" name="username" placeholder="Your Username" class="form-control">
