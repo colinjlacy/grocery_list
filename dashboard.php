@@ -56,6 +56,19 @@
                 };
                 init();
 
+                $scope.deleteList = function(id, index) {
+                    var url = 'http://localhost:8888/grocery_list/deleteList.php';
+
+                    $http({
+                        url: url,
+                        method: "POST",
+                        data: id
+                    })
+                        .success(function(data) {
+                            $scope.lists.splice(index, 1);
+                        });
+                };
+
                 $scope.add = {};
 
                 $scope.addItem = function(item) {

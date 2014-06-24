@@ -1,5 +1,4 @@
 <div>
-
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-sm-push-2">
@@ -11,14 +10,14 @@
                 <a class="btn btn-primary" href="/grocery_list/dashboard.php#/add-new">Add New List</a>
             </div>
         </div>
-        <div class="row">
+        <div class="row hidden-xs">
             <div class="col-sm-8 col-sm-push-2">
                 <hr>
                 <div class="row">
                     <div class="col-sm-4">
                         <strong class="lead no-bottom">Title</strong>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-5">
                         <strong class="lead no-bottom">Content</strong>
                     </div>
                 </div>
@@ -31,14 +30,13 @@
                     <div class="col-sm-4">
                         <p>{{list.title}}</p>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-5">
                         <p>{{list.snippet}}</p>
                     </div>
-                    <div class="col-sm-1">
+                    <div class="col-sm-3 text-right">
                         <button class="btn btn-default fa fa-list-ul"></button>
-                    </div>
-                    <div class="col-sm-1">
                         <button class="btn btn-default fa fa-print"></button>
+                        <button class="btn btn-default fa fa-trash-o" ng-click="deleteList(list.id, $index)"></button>
                     </div>
                 </div>
             </div>
