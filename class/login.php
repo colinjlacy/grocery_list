@@ -20,26 +20,31 @@ class Login {
         return $hacker;
     }
 
-    public function setLogin($user_id) {
+    public function setLogin($user_id, $username) {
         // set the session variable "user_loggedin" to the user's
         $_SESSION['user_loggedin'] = $user_id;
+        $_SESSION['username'] = $username;
     }
 
     public function authenticate($token, $username, $password) {
 
-        if ($this->checkToken($token) == false) {
+        if ($this->checkToken($token) == true) {
             die;
         }
 
-        $u = $username;
-        $p = $password;
+        $u = strip_tags($username);
+        $p = strip_tags($password);
 
         // get user entry from database and compare password to saved password field
         // if successful, setLogin with the user's id
+        // TODO: get these values from the database
         if ($u == "colin" && $p == "thisthis") {
-            $this -> setLogin('1');
+            $this -> setLogin('12');
+            return true;
         }
-        return true;
+
+        return false; // note that this won't fire if the if-statement returns true
+
     }
 
     public function checkInputLength($username, $password) {
@@ -60,5 +65,9 @@ class Login {
         }
 
         return $empty_array;
+    }
+
+    public function logout() {
+        session_unset();
     }
 } 

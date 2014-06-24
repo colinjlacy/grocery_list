@@ -1,27 +1,42 @@
 <?php
-session_start();
 
-$token = $_POST['token'];
-$username = $_POST['username'];
-$password = $_POST['password'];
+// if no form values have been submitted
+if(!(isset($_POST))) {
 
-require_once 'class/login.php';
+    // send the user back to the index
+    header('Location: /grocery_list/index.php');
 
-$login = new \classes\Login();
-
-$empty = $login->checkInputLength($username, $password);
-
-if (count($empty) > 0) {
-    echo "EMPTY!!!";
+// if form values have been submitted...
 } else {
-    echo "Got past the empty array";
 
-    $isLoggedIn = $login->authenticate($token, $username, $password);
+    // Get the input data from the user
+    $token = $_POST['token'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-    if ($isLoggedIn == true) {
-        echo "Should be logged in!";
+    // Call for the Login class
+    require_once 'class/login.php';
+
+    // Create a new instance of Login
+    $login = new \classes\Login();
+
+    // Check to see if either of the inputs are empty
+    if (count($login->checkInputLength($username, $password)) > 0) {
+
+        // TODO: Handle empty input errors
+
+    } else {
+
+        // If their neither of them empty, authenticate!
+        if (!($login->authenticate($token, $username, $password))) {
+
+            // Should auth fail, send them back to the index
+            header('Location: /grocery_list/index.php');
+        }
+
     }
 
-    echo $_SESSION['user_loggedin'];
+    // at this point, the user has been authenticated, their ID saved in the session.
 }
+
 ?>

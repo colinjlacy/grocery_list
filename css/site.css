@@ -1,3 +1,9 @@
 .nav-tabs {
     margin-bottom: .5em;
 }
+.no-bottom {
+    margin-bottom: 0;
+}
+.no-top {
+    margin-top: 0;
+}

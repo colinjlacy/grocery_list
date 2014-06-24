@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php if(!(isset($_SESSION['user_loggedin']))) {
-    header('Location: /index.php');
+    require 'user_login.php';
 };
 ?>
 
@@ -10,54 +10,91 @@
     <title></title>
 
     <script src="angular/angular.js"></script>
+    <script src="angular/angular-route.js"></script>
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/site.css">
 
     <script>
-        angular.module("ajax", [])
-            .controller("defaultController", function($scope, $http, $templateCache) {
-                $scope.submit = function(input) {
+        angular.module("ajax", [
+                'ngRoute'
+            ])
+            .config(function($routeProvider) {
+                $routeProvider.when("/", {
+                    templateUrl: "views/listing.html"
+                });
+                $routeProvider.when("/addNew", {
+                    templateUrl: "views/addNew.html"
+                })
+            })
+            .config(function ($httpProvider) {
+                $httpProvider.defaults.headers.post['Content-Type'] = ''
+                    + 'application/x-www-form-urlencoded; charset=UTF-8';
+            })
+            .controller("listCtrl", function($scope, $http) {
+                var init = function() {
                     $http({
-                        url: "set_session.php",
-                        method: "POST",
-                        data: {
-                            'name' : input
-                        }
-                        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-                        cache: $templateCache
+                        url: "data.php",
+                        method: "GET"
                     })
                         .success(function(response) {
-                            $scope.status = response.status;
+                            $scope.lists = response;
                         })
                         .error(function(error) {
                             $scope.status = error || "Request Failed";
+                        });
+                };
+                init();
+
+                $scope.add = {};
+
+                $scope.addItem = function(item) {
+
+                    if(!($scope.add.items)) {
+                        $scope.add.items = [];
+                    }
+
+                    $scope.add.items.push(item);
+                    $scope.itemToAdd = "";
+                    var input = document.getElementById('addInput');
+                    input.focus();
+                };
+
+                $scope.save = function() {
+                    var add = $scope.add;
+                    var url = 'http://localhost:8888/grocery_list/view_new.php';
+
+                    $http({
+                        url: url,
+                        method: "POST",
+                        data: add
+                    })
+                        .success(function(data) {
+                            console.log(data);
                         });
                 };
             })
     </script>
 
 </head>
-<body ng-controller="defaultController">
-
-<? if (isset($_SESSION['name'])) { ?>
-    <h1>
-        <?php
-        echo($_SESSION['name']);
-        ?>
-    </h1>
-<?php }; ?>
-
-<div class="well">
-    <p class="alert alert-success" ng-show="status">
-        {{status}}
-    </p>
-    <label class="control-label">
-        Enter a name
-        <input type="text" ng-model="name" class="form-control"/>
-    </label>
-    <button class="btn btn-primary" ng-click="submit(name)">Submit</button>
+<body ng-controller="listCtrl">
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="text-right">
+                    <a class="btn btn-primary btn-sm pull-right">Logout</a>
+                </p>
+                <h2 class="text-muted">
+                    <?php echo $_SESSION['username']; ?>'s Grocery Lists
+                </h2>
+            </div>
+        </div>
+    </div>
 </div>
+
+<ng-view></ng-view>
 
 </body>
 </html>
