@@ -1,5 +1,10 @@
 <div>
     <div class="container">
+        <div class="row" ng-show="add.error">
+            <div class="col-sm-12 alert alert-danger">
+                Uh oh, there was an error - {{add.error}}...
+            </div>
+        </div>
         <div class="row">
             <div class="col-sm-8 col-sm-push-2">
                 <h2>
@@ -22,9 +27,9 @@
                 <hr>
                 <label class="control-label">Add an item:</label>
                 <div class="input-group">
-                    <input type="text" id="addInput" class="form-control" ng-model="itemToAdd" />
+                    <input type="text" id="addInput" class="form-control" ng-model="add.itemToAdd" />
                     <span class="input-group-btn">
-                        <button class="btn btn-default" type="button" ng-click="addItem(itemToAdd)">Add It!</button>
+                        <button class="btn btn-default" type="button" ng-click="addItem(add.itemToAdd)">Add It!</button>
                     </span>
                 </div><!-- /input-group -->
             </div>

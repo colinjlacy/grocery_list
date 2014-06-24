@@ -7,3 +7,9 @@
 .no-top {
     margin-top: 0;
 }
+#listing p {
+    margin-bottom: 5px;
+    margin-top: 3px;
+    font-size: 16px;
+    color: #666;
+}
