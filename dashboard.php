@@ -32,31 +32,25 @@
                     templateUrl: "views/addNew.html"
                 });
                 $routeProvider.when("/:id", {
-                    templateUrl: "views/viewList.html"
+                    templateUrl: "views/viewList.html",
+                    controller: "viewCtrl"
                 });
 
             })
             .controller("listCtrl", function($scope, $http, $location, userId) {
+                // the initial function that pulls lists from the database on load
                 var init = function() {
                     $http({
-                        url: "retrieveLists.php",
+                        url: "retrieve_lists.php",
                         method: "GET"
                     })
                         .success(function(response) {
                             $scope.lists = response;
+                            console.log($scope.lists);
 
                             if(response.length > 0) {
                                 $scope.hasLists = true;
                             }
-
-                            var breakString = "&?colin!?&";
-
-                            for (var i = 0; i < $scope.lists.length; i++) {
-                                $scope.lists[i].items = $scope.lists[i].content.split(breakString);
-                                $scope.lists[i].snippet = $scope.lists[i].items.slice(0,3).join(", ") + "...";
-                            }
-
-
 
                         })
                         .error(function(error) {
@@ -65,8 +59,9 @@
                 };
                 init();
 
+                // the function that allows users to delete lists from the database
                 $scope.deleteList = function(id, index) {
-                    var url = 'http://localhost:8888/grocery_list/deleteList.php';
+                    var url = 'http://localhost:8888/grocery_list/delete_list.php';
 
                     $http({
                         url: url,
@@ -75,9 +70,13 @@
                     })
                         .success(function(data) {
                             $scope.lists.splice(index, 1);
+                            if ($scope.lists.length == 0) {
+                                $scope.hasLists = false;
+                            }
                         });
                 };
 
+                // setting an empty object
                 $scope.add = {};
 
                 $scope.addItem = function(item) {
@@ -95,7 +94,7 @@
                 $scope.save = function() {
                     $scope.add.userId = userId;
                     var add = $scope.add;
-                    var url = 'http://localhost:8888/grocery_list/processNewList.php';
+                    var url = 'http://localhost:8888/grocery_list/add_list.php';
 
                     $http({
                         url: url,
@@ -107,8 +106,8 @@
                             if(!isNaN(data)) {
                                 $scope.add.error = null;
                                 add.id = data;
-                                add.snippet = add.items.slice(0,3).join(", ") + "...";
                                 $scope.lists.push(add);
+                                $scope.hasLists = true;
                                 $location.path('/');
                                 $scope.add = {};
                             } else {
@@ -122,19 +121,101 @@
                 };
 
             })
-            .controller("viewCtrl", function($scope, $routeParams) {
-                var id = $routeParams.id;
+            .controller("viewCtrl", function($scope, $http, $routeParams, $location) {
 
-                var filterView = function(array, filterVal) {
-                    for (var i = 0; i < array.length; i++) {
-                        if (array[i].id == filterVal) {
-                            $scope.viewList = array[i];
-                            return;
+                var getList = function(id) {
+                    for (var i = 0; i < $scope.lists.length; i++) {
+                        if (id == $scope.lists[i].id) {
+                            $scope.activeList = $scope.lists[i];
+                            break;
                         }
+                    }
+                    $http.get('retrieve_items.php?id=' + id)
+                        .success(function(data) {
+                            $scope.items = data;
+                        })
+                        .error(function(error) {
+                            $scope.viewError = error;
+                        })
+                };
+                getList($routeParams.id);
+
+                $scope.doneToggle = function(item) {
+                    if (item.done) {
+                        item.done = false;
+                    } else {
+                        item.done = true;
                     }
                 };
 
-                filterView($scope.lists, id);
+                $scope.hideDoneToggle = function() {
+                    if ($scope.hideDone) {
+                        $scope.hideDone = false;
+                        document.getElementById('hide-toggle').innerHTML="Hide Checked";
+                    } else {
+                        $scope.hideDone = true;
+                        document.getElementById('hide-toggle').innerHTML="Show Checked";
+                    }
+                };
+
+                $scope.shouldBeHidden = function(item) {
+                    if ($scope.hideDone && item.done) {
+                        return true;
+                    }
+                };
+
+                $scope.updateList = function() {
+                    var doneArray = [];
+
+                    console.log($scope.items);
+
+                    for(var i = 0; i < $scope.items.length; i++) {
+                        console.log($scope.items[i].id + " = " + $scope.items[i].done);
+                        if ($scope.items[i].done == true) {
+                            doneArray.push($scope.items[i].id);
+                            $scope.items.splice(i, 1);
+                            i = i - 1;
+                        }
+                    }
+
+                    console.log(doneArray);
+
+                    $http({
+                        url: 'http://localhost:8888/grocery_list/delete_items.php',
+                        method: "POST",
+                        data: doneArray
+                    })
+                        .success(function(data) {
+                            console.log(data);
+                            $location.path('/');
+                        });
+                };
+
+                // the function that allows users to delete lists from the database
+                $scope.deleteList = function(id) {
+                    var url = 'http://localhost:8888/grocery_list/delete_list.php';
+
+                    $http({
+                        url: url,
+                        method: "POST",
+                        data: id
+                    })
+                        .success(function(data) {
+                            for (var i = 0; i < $scope.lists.length; i++) {
+                                console.log("id: "+id);
+                                console.log("list id: "+$scope.lists[i].id);
+
+                                if (id == $scope.lists[i].id) {
+                                    console.log("list id: "+$scope.lists[i].id);
+                                    $scope.lists.splice(i, 1);
+                                    break;
+                                }
+                            }
+                            $location.path('/');
+                        });
+                };
+
+
             })
     </script>
 
@@ -145,10 +226,10 @@
         <div class="row">
             <div class="col-sm-12">
                 <p class="text-right">
-                    <a class="btn btn-primary btn-sm pull-right">Logout</a>
+                    <a class="btn btn-primary btn-sm pull-right" href="kill.php">Logout</a>
                 </p>
                 <h2 class="text-muted">
-                    <?php echo $_SESSION['username']; ?>'s Grocery Lists
+                    <?php echo $_SESSION['user_loggedin']; ?>'s Grocery Lists
                 </h2>
             </div>
         </div>

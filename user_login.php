@@ -1,10 +1,10 @@
 <?php
 
 // if no form values have been submitted
-if(!(isset($_POST))) {
+if(!(isset($_POST['username']) && isset($_POST['password']))) {
 
     // send the user back to the index
-    header('Location: /grocery_list/index.php');
+    header('Location: /grocery_list/');
 
 // if form values have been submitted...
 } else {
