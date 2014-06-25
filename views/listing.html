@@ -1,4 +1,20 @@
-<div>
+<div ng-hide="hasLists">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-push-2">
+                <div class="alert alert-warning">
+                    <h3 class="no-top">Look at that!</h3>
+                    <p id="noLists" class="lead">
+                        It looks lke you don't have any lists! Click the button below to do something about that and add your first list!
+                    </p>
+                    <a class="btn btn-warning" href="/grocery_list/dashboard.php#/add-new">Add New List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ng-show="hasLists">
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-sm-push-2">
@@ -20,6 +36,9 @@
                     <div class="col-sm-5">
                         <strong class="lead no-bottom">Content</strong>
                     </div>
+                    <div class="col-sm-3 text-center">
+                        <strong class="lead no-bottom">Options</strong>
+                    </div>
                 </div>
             </div>
         </div>
@@ -34,8 +53,8 @@
                         <p>{{list.snippet}}</p>
                     </div>
                     <div class="col-sm-3 text-right">
-                        <button class="btn btn-default fa fa-list-ul"></button>
-                        <button class="btn btn-default fa fa-print"></button>
+                        <a class="btn btn-default fa fa-list-ul" href="/grocery_list/dashboard.php#/{{list.id}}"></a>
+                        <a class="btn btn-default fa fa-print"></a>
                         <button class="btn btn-default fa fa-trash-o" ng-click="deleteList(list.id, $index)"></button>
                     </div>
                 </div>

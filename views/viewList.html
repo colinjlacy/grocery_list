@@ -1,7 +1,13 @@
-<div class="container">
+<div class="container" ng-controller="viewCtrl">
     <div class="row">
         <div class="col-sm-8 col-sm-push-2">
-            
+            <h2>{{viewList.title}}</h2>
+            <ol class="view-list">
+                <li class="view-list-item" ng-repeat="item in viewList.items">
+                        {{item}}
+                        <button class="btn btn-sm fa fa-check pull-right item-check" ng-class="{btnSuccess: item.done}" data-toggle="button" ng-click="doneToggle(item.done)"></button>
+                </li>
+            </ol>
         </div>
     </div>
 </div>

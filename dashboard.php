@@ -11,6 +11,7 @@
 
     <script src="angular/angular.js"></script>
     <script src="angular/angular-route.js"></script>
+    <script src="angular/angular-resource.js"></script>
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
@@ -19,7 +20,8 @@
 
     <script>
         angular.module("ajax", [
-                'ngRoute'
+                'ngRoute',
+                'ngResource'
             ])
             .value("userId", <?php echo $_SESSION['user_loggedin']; ?>)
             .config(function($routeProvider) {
@@ -28,6 +30,9 @@
                 });
                 $routeProvider.when("/add-new", {
                     templateUrl: "views/addNew.html"
+                });
+                $routeProvider.when("/:id", {
+                    templateUrl: "views/viewList.html"
                 });
 
             })
@@ -39,6 +44,10 @@
                     })
                         .success(function(response) {
                             $scope.lists = response;
+
+                            if(response.length > 0) {
+                                $scope.hasLists = true;
+                            }
 
                             var breakString = "&?colin!?&";
 
@@ -111,6 +120,21 @@
                             $scope.add.error = error;
                         });
                 };
+
+            })
+            .controller("viewCtrl", function($scope, $routeParams) {
+                var id = $routeParams.id;
+
+                var filterView = function(array, filterVal) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i].id == filterVal) {
+                            $scope.viewList = array[i];
+                            return;
+                        }
+                    }
+                };
+
+                filterView($scope.lists, id);
             })
     </script>
 
