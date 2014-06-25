@@ -8,6 +8,7 @@
 
 namespace classes;
 
+require_once 'login.php';
 
 class addUser extends Login {
 
@@ -25,7 +26,7 @@ class addUser extends Login {
 
     function validateInputs($token, $username, $password) {
 
-        if ($this->checkToken($token) == false) {
+        if ($this->checkToken($token) == true) {
             die;
         }
 
@@ -39,13 +40,13 @@ class addUser extends Login {
         foreach ($inputs as $key => $value) {
             switch($key) {
                 case "Username":
-                    if(!preg_match("/^[A-Za-z0-9]{1,20}$/", $value) )
+                    if(!preg_match("/^[A-Za-z0-9]{0,20}$/", $value) )
                     {
                         $bad_format[] = $key;
                     }
                     break;
                 case "Password":
-                    if(!preg_match("/^[A-Za-z0-9]{6,20}$/", $value) )
+                    if(!preg_match("/^[A-Za-z0-9]{0,20}$/", $value) )
                     {
                         $bad_format[] = $key;
                     }
@@ -54,4 +55,4 @@ class addUser extends Login {
 
         return $bad_format;
     }
-} 
+}

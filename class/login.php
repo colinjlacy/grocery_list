@@ -37,13 +37,40 @@ class Login {
 
         // get user entry from database and compare password to saved password field
         // if successful, setLogin with the user's id
-        // TODO: get these values from the database
-        if ($u == "colin" && $p == "thisthis") {
-            $this -> setLogin('12');
-            return true;
+
+        include("../inc/db.inc");
+
+        // if no db connection info, then you can't connect
+        if(!$con) {
+
+            // let somebody know
+            die('Could not connect ' . mysqli_error($con));
+
         }
 
-        return false; // note that this won't fire if the if-statement returns true
+        // build the list query
+        $user_sql = "SELECT * FROM users WHERE username = '$u' and password = '$p')";
+
+        // execute the query and save the returned object
+        $retval = mysqli_query($con, $user_sql);
+
+        // if no returned object
+        if(!$retval) {
+
+            // let somebody know
+            die('Could not retrieve user ' . mysqli_error($con));
+
+        // if there is a returned object
+        } else {
+
+            // return the ID of the inserted row
+            $user_id = mysqli_insert_id($con);
+
+            $this->setLogin($user_id, $username);
+
+            return true;
+
+        }
 
     }
 
@@ -67,7 +94,4 @@ class Login {
         return $empty_array;
     }
 
-    public function logout() {
-        session_unset();
-    }
-} 
+}

@@ -1,6 +1,7 @@
 <?php session_start(); ?>
 <?php if(!(isset($_SESSION['user_loggedin']))) {
-    require 'user_login.php';
+    $action = $_GET['action'];
+    require "user_".$action.".php";
 };
 ?>
 
@@ -229,7 +230,7 @@
                     <a class="btn btn-primary btn-sm pull-right" href="kill.php">Logout</a>
                 </p>
                 <h2 class="text-muted">
-                    <?php echo $_SESSION['user_loggedin']; ?>'s Grocery Lists
+                    <?php echo $_SESSION['username']; ?>'s Grocery Lists
                 </h2>
             </div>
         </div>

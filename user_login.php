@@ -23,7 +23,8 @@ if(!(isset($_POST['username']) && isset($_POST['password']))) {
     // Check to see if either of the inputs are empty
     if (count($login->checkInputLength($username, $password)) > 0) {
 
-        // TODO: Handle empty input errors
+        // Should auth fail, send them back to the index
+        header('Location: /grocery_list/index.php');
 
     } else {
 
