@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 // Get the input data from the user
 $token = $_POST['token'];
