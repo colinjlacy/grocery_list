@@ -33,7 +33,7 @@
                     <div class="col-sm-9">
                         <strong class="lead no-bottom">Title</strong>
                     </div>
-                    <div class="col-sm-3 text-center">
+                    <div class="col-sm-3 text-right">
                         <strong class="lead no-bottom">Options</strong>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                     </div>
                     <div class="col-sm-3 text-right">
                         <a class="btn btn-default fa fa-list-ul" href="/grocery_list/dashboard.php#/{{list.id}}"></a>
-                        <a class="btn btn-default fa fa-print"></a>
+                        <a class="btn btn-default fa fa-print" target="_blank" href="create_pdf.php?id={{list.id}}&title={{list.urlencode}}"></a>
                         <button class="btn btn-default fa fa-trash-o" ng-click="deleteList(list.id, $index)"></button>
                     </div>
                 </div>
