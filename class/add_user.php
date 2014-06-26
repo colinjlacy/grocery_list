@@ -28,7 +28,7 @@ class addUser extends Login {
 
         if ($this->checkToken($token) == true) {
             die;
-        }
+        };
 
         $inputs = [
             "Username" => $username,
