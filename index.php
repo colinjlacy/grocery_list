@@ -44,7 +44,7 @@ $_SESSION['token'] = md5(uniqid(microtime(), true));
                 <li><a href="#register" data-toggle="tab">Register</a></li>
             </ul>
             <div class="tab-content">
-                <div id="login" class="well tab-pane fade">
+                <div id="login" class="well tab-pane fade in active">
                     <form method="post" action="dashboard.php?action=login">
                         <div class="form-group">
                             <label class="control-label">Username</label>
@@ -58,7 +58,7 @@ $_SESSION['token'] = md5(uniqid(microtime(), true));
                         <input type="submit" class="btn btn-primary" value="Submit!">
                     </form>
                 </div>
-                <div id="register" class="well tab-pane fade in active">
+                <div id="register" class="well tab-pane fade">
                     <form method="post" action="dashboard.php?action=register">
                         <div class="form-group">
                             <label class="control-label">Username <span class="text-muted">Letters and numbers only</span></label>

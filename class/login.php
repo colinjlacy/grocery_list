@@ -32,13 +32,13 @@ class Login {
             die;
         }
 
-        $u = strip_tags($username);
-        $p = strip_tags($password);
+        $u = mysql_real_escape_string($username);
+        $p = mysql_real_escape_string($password);
 
         // get user entry from database and compare password to saved password field
         // if successful, setLogin with the user's id
 
-        include("../inc/db.inc");
+        require_once("inc/db.inc");
 
         // if no db connection info, then you can't connect
         if(!$con) {
@@ -49,7 +49,7 @@ class Login {
         }
 
         // build the list query
-        $user_sql = "SELECT * FROM users WHERE username = '$u' and password = '$p')";
+        $user_sql = "SELECT * FROM users WHERE username = '$u' and password = '$p'";
 
         // execute the query and save the returned object
         $retval = mysqli_query($con, $user_sql);

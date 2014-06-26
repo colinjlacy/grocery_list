@@ -37,7 +37,7 @@ if(!(isset($_POST['username']) && isset($_POST['password']))) {
 
     }
 
-    // at this point, the user has been authenticated, their ID saved in the session.
+    // at this point, the user has been authenticated, their ID saved in the session.git
 }
 
 ?>
