@@ -22,7 +22,7 @@ $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8',
 
 // set document information
 $pdf->SetCreator($config['creator']);
-$pdf->SetAuthor($config['author']);
+$pdf->SetAuthor($_SESSION['username']);
 $pdf->SetTitle($list['title']);
 $pdf->SetSubject($list['title'].", A Grocery List");
 $pdf->SetKeywords($config['keywords']);
