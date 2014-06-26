@@ -1,6 +1,6 @@
 <?php session_start();
 if (isset($_SESSION['user_loggedin'])) {
-    header('Location: /grocery_list/dashboard.php');
+    header('Location: /sandbox/colin/grocery_list/dashboard.php');
     exit;
 };
 $_SESSION['token'] = md5(uniqid(microtime(), true));

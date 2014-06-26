@@ -4,7 +4,7 @@
         $action = $_GET['action'];
         require "user_".$action.".php";
     } else {
-        header('Location: /grocery_list/');
+        header('Location: /sandbox/colin/grocery_list/');
     }
 };
 ?>

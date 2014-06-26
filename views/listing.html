@@ -7,7 +7,7 @@
                     <p id="noLists" class="lead">
                         It looks lke you don't have any lists! Click the button below to do something about that and add your first list!
                     </p>
-                    <a class="btn btn-warning" href="/grocery_list/dashboard.php#/add-new">Add New List</a>
+                    <a class="btn btn-warning" href="/sandbox/colin/grocery_list/dashboard.php#/add-new">Add New List</a>
                 </div>
             </div>
         </div>
@@ -23,7 +23,7 @@
                 </h2>
             </div>
             <div class="col-sm-2 col-sm-push-2 text-right">
-                <a class="btn btn-primary" href="/grocery_list/dashboard.php#/add-new">Add New List</a>
+                <a class="btn btn-primary" href="/sandbox/colin/grocery_list/dashboard.php#/add-new">Add New List</a>
             </div>
         </div>
         <div class="row hidden-xs">
@@ -47,7 +47,7 @@
                         <p>{{list.title}}</p>
                     </div>
                     <div class="col-sm-3 text-right">
-                        <a class="btn btn-default fa fa-list-ul" href="/grocery_list/dashboard.php#/{{list.id}}"></a>
+                        <a class="btn btn-default fa fa-list-ul" href="/sandbox/colin/grocery_list/dashboard.php#/{{list.id}}"></a>
                         <a class="btn btn-default fa fa-print" target="_blank" href="create_pdf.php?id={{list.id}}&title={{list.urlencode}}"></a>
                         <button class="btn btn-default fa fa-trash-o" ng-click="deleteList(list.id, $index)"></button>
                     </div>

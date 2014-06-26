@@ -4,11 +4,11 @@ session_start();
 // Check that the user is logged in
 if (!(isset($_SESSION['user_loggedin']))) {
 
-    header('Location: /grocery_list/');
+    header('Location: /sandbox/colin/grocery_list/');
 }
 
 // Include the main TCPDF library.
-require_once('lib/tcpdf/tcpdf.php');
+require_once('../tcpdf/tcpdf.php');
 require_once('class/PDF.php');
 
 $creator = new \classes\PDF();
