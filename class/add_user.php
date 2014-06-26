@@ -35,7 +35,7 @@ class addUser extends Login {
             "Password" => $password
         );
 
-        $bad_format = [];
+        $bad_format = array();
 
         foreach ($inputs as $key => $value) {
             switch($key) {
