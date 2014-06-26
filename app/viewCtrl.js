@@ -59,7 +59,7 @@ angular.module("grocery")
             console.log(doneArray);
 
             $http({
-                url: 'http://localhost:8888/grocery_list/delete_items.php',
+                url: 'http://dingwall.highlandgroupinc.com/sandbox/colin/grocery_list/delete_items.php',
                 method: "POST",
                 data: doneArray
             })
@@ -71,7 +71,7 @@ angular.module("grocery")
 
         // the function that allows users to delete lists from the database
         $scope.deleteList = function(id) {
-            var url = 'http://localhost:8888/grocery_list/delete_list.php';
+            var url = 'http://dingwall.highlandgroupinc.com/sandbox/colin/grocery_list/delete_list.php';
 
             $http({
                 url: url,
