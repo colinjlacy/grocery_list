@@ -30,10 +30,10 @@ class addUser extends Login {
             die;
         };
 
-        $inputs = [
+        $inputs = array(
             "Username" => $username,
             "Password" => $password
-        ];
+        );
 
         $bad_format = [];
 
