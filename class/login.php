@@ -75,12 +75,12 @@ class Login {
     }
 
     public function checkInputLength($username, $password) {
-        $inputs = [
+        $inputs = array(
             "Username" => $username,
             "Password" => $password
-        ];
+        );
 
-        $empty_array = [];
+        $empty_array = array();
 
         foreach ($inputs as $key => $value) {
 

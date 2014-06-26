@@ -17,7 +17,7 @@ class PDF {
 
     public function pdf_config() {
 
-        $config_data = [
+        $config_data = array(
             // metadata
             'creator' => "Colin J Lacy",
             'keywords' => "grocery, list",
@@ -27,7 +27,7 @@ class PDF {
             'top_margin' => 20,
             'right_margin' => 30
 
-        ];
+        );
 
         return $config_data;
     }
@@ -75,10 +75,10 @@ class PDF {
 
         }
 
-        $print_list = [
+        $print_list = array(
             'title' => $title,
             'items' => $items
-        ];
+        );
 
         return $print_list;
 
