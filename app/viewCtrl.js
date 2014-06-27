@@ -1,10 +1,10 @@
 angular.module("grocery")
-    .controller("viewCtrl", function($scope, $http, $routeParams, $location) {
+    .controller("viewCtrl", function($scope, $http, $routeParams, $rootScope, $location) {
 
         var getList = function(id) {
-            for (var i = 0; i < $scope.lists.length; i++) {
-                if (id == $scope.lists[i].id) {
-                    $scope.activeList = $scope.lists[i];
+            for (var i = 0; i < $rootScope.lists.length; i++) {
+                if (id == $rootScope.lists[i].id) {
+                    $scope.activeList = $rootScope.lists[i];
                     break;
                 }
             }
@@ -79,13 +79,13 @@ angular.module("grocery")
                 data: id
             })
                 .success(function(data) {
-                    for (var i = 0; i < $scope.lists.length; i++) {
+                    for (var i = 0; i < $rootScope.lists.length; i++) {
                         console.log("id: "+id);
-                        console.log("list id: "+$scope.lists[i].id);
+                        console.log("list id: "+$rootScope.lists[i].id);
 
-                        if (id == $scope.lists[i].id) {
-                            console.log("list id: "+$scope.lists[i].id);
-                            $scope.lists.splice(i, 1);
+                        if (id == $rootScope.lists[i].id) {
+                            console.log("list id: "+$rootScope.lists[i].id);
+                            $rootScope.lists.splice(i, 1);
                             break;
                         }
                     }
