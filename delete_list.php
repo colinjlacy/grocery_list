@@ -15,6 +15,8 @@ $id = $_POST;
 // retrieve the database info
 include("inc/db.inc");
 
+file_put_contents('log.log', "got past the include", FILE_APPEND);
+
 // if no db connection info, then you can't connect
 if(!$con) {
 
