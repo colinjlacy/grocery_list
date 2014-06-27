@@ -2,7 +2,7 @@
 session_start();
 
 if(!($_SESSION['user_loggedin'])) {
-    die;
+    header('Location: /sandbox/colin/grocery_list/');
 } else {
     $user_id = $_SESSION['user_loggedin'];
 }
