@@ -2,7 +2,7 @@
 session_start();
 
 if(!($_SESSION['user_loggedin'])) {
-    file_put_contents('log.html', "dying at the session validation", FILE_APPEND);
+    file_put_contents('log.txt', "dying at the session validation", FILE_APPEND);
     die;
 } else {
     $user_id = $_SESSION['user_loggedin'];
@@ -16,12 +16,12 @@ $id = $_POST;
 // retrieve the database info
 include("inc/db.inc");
 
-file_put_contents('log.html', "got past the include", FILE_APPEND);
+file_put_contents('log.txt', "got past the include", FILE_APPEND);
 
 // if no db connection info, then you can't connect
 if(!$con) {
 
-    file_put_contents('log.html', "no connection", FILE_APPEND);
+    file_put_contents('log.txt', "no connection", FILE_APPEND);
 
     // let somebody know
     die('Could not connect: ' . mysqli_error($con));
@@ -37,7 +37,7 @@ $retval = mysqli_query($con, $list_sql);
 // if no returned object
 if(!$retval) {
 
-    file_put_contents('log.html', "list sql query returned negative", FILE_APPEND);
+    file_put_contents('log.txt', "list sql query returned negative", FILE_APPEND);
 
     // let somebody know
     die('Could not delete list: ' . mysqli_error($con));
@@ -53,12 +53,12 @@ $itemval = mysqli_query($con, $item_sql);
 // if no returned object
 if(!$itemval) {
 
-    file_put_contents('log.html', "item sql query returned negative", FILE_APPEND);
+    file_put_contents('log.txt', "item sql query returned negative", FILE_APPEND);
     // let somebody know
     die('Could not delete items: ' . mysqli_error($con));
 
 } else {
 
-    file_put_contents('log.html', "item sql query returned positive", FILE_APPEND);
+    file_put_contents('log.txt', "item sql query returned positive", FILE_APPEND);
 
 };
