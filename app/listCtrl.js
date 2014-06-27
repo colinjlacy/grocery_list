@@ -1,6 +1,5 @@
 angular.module("grocery")
     .controller("listCtrl", function($scope, $http, $location, $route, $rootScope, userId) {
-        // the initial function that pulls lists from the database on load
 
         var init = function() {
             $http({
@@ -15,7 +14,7 @@ angular.module("grocery")
                     }
 
                     if(response.length > 0) {
-                        $scope.hasLists = true;
+                        $rootScope.hasLists = true;
                     }
 
                 })
@@ -25,7 +24,6 @@ angular.module("grocery")
         };
         init();
 
-        // the function that allows users to delete lists from the database
         $scope.deleteList = function(id, index) {
             var url = 'delete_list.php';
 
@@ -37,7 +35,7 @@ angular.module("grocery")
                 .success(function(data) {
                     $rootScope.lists.splice(index, 1);
                     if ($rootScope.lists.length == 0) {
-                        $scope.hasLists = false;
+                        $rootScope.hasLists = false;
                     }
                 });
         };
@@ -46,7 +44,6 @@ angular.module("grocery")
             $location.path("/");
         };
 
-        // setting an empty object
         $scope.add = {};
 
         $scope.addItem = function(item) {
@@ -82,7 +79,7 @@ angular.module("grocery")
                         add.id = data;
                         add.urlencode = encodeURIComponent(add.title);
                         $rootScope.lists.push(add);
-                        $scope.hasLists = true;
+                        $rootScope.hasLists = true;
                         $scope.add = {};
                         $location.path('/');
                     } else {

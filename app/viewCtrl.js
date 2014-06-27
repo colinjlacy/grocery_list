@@ -69,7 +69,6 @@ angular.module("grocery")
                 });
         };
 
-        // the function that allows users to delete lists from the database
         $scope.deleteList = function(id) {
             var url = 'delete_list.php';
 

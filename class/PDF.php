@@ -107,6 +107,7 @@ class PDF {
     }
 
     public function logging($file, $log_entry) {
+        //a simple logging function for working with the TCPDF library
         file_put_contents($file, $log_entry, FILE_APPEND | LOCK_EX);
     }
 

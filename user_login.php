@@ -4,7 +4,7 @@
 if(!(isset($_POST['username']) && isset($_POST['password']))) {
 
     // send the user back to the index
-    header('Location: /sandbox/colin/grocery_list/');
+    header('Location: /sandbox/colin/');
 
 // if form values have been submitted...
 } else {
@@ -24,7 +24,7 @@ if(!(isset($_POST['username']) && isset($_POST['password']))) {
     if (count($login->checkInputLength($username, $password)) > 0) {
 
         // Should auth fail, send them back to the index
-        header('Location: /sandbox/colin/grocery_list/index.php');
+        header('Location: /sandbox/colin/index.php');
 
     } else {
 
@@ -32,7 +32,7 @@ if(!(isset($_POST['username']) && isset($_POST['password']))) {
         if (!($login->authenticate($token, $username, $password))) {
 
             // Should auth fail, send them back to the index
-            header('Location: /sandbox/colin/grocery_list/index.php');
+            header('Location: /sandbox/colin/index.php');
         }
 
     }

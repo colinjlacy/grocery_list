@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Readme</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+
+</head>
+<body>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-push-2">
+                <h1>Readme</h1>
+                <p class="lead">
+                    A bit of explanation about what's happening here...
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <riv class="row">
+        <div class="col-sm-8 col-sm-push-2">
+            <h2>On the backend:</h2>
+            <p>This app works within the confines of three pages, facilitated mainly by the one-page functionality of AngularJS doing the heavy lifting for user interaction.  Two pages, this one and the login page, are pretty straightforward.  The third, <pre>dashboard.php</pre>, is where all of the magic happens.  I made use of Angular's <pre>$http</pre> provider to run all of the calls to my backend scripts, and then display the results.  So in essence, Angular runs the View and half the Controller, while PHP runs the other half of the Controller and the Data Model.</p>
+            <p>There are three classes at work here.  The first is the Login class, which goes through some data validation, error handling, and queries the database for the user's information.  The second is the Add User class, which inherits the Login class to run similar data validation, and also inserts the user's information into the database.  The third runs all of the necessary functions for sending data off to be processed by TCPDF.</p>
+            <h2>On the frontend:</h2>
+            <p>Template files are pretty straightforward, so there's really not too much to say there.  Everything utilizes the Bootstrap 3 design framework.  That made getting up and running pretty smooth - programming is easier when you don't have to think about what you'll name a <pre>div</pre> class!</p>
+            <p>Angular does the bulk of the work on the front end, which also helped get everything up and running quickly.  As is generally the case with Angular, there was a lot of writing up front, but development moved quickly after that.  There are two controllers to run everything, one to tackle the Grocery Lists, and one to tackle the List Items in the List View.  I utilized the <pre>$rootScope</pre> to handle inheritance of Grocery List data, and the rest fell into line after that.</p>
+            <h2>Room for improvement:</h2>
+            <p>Since the goal was to execute the functionality as directed in the instructions, I mainly went with business logic as the focus of development and left a few other key items to future work.  The most prominent is security, which is minimal in this application at best.  Room for improvement for security includes:</p>
+            <ul>
+                <li>Hashing passwords</li>
+                <li>Better username and password character variations/obscurity</li>
+                <li>More validation checks at all levels of the backend</li>
+            </ul>
+            <p>Looking back at the project now, after a first round of development, I realize that I probably could have written a fourth class to handle list management within the database.  A lot of the functions of the scripts that put in list calls to the database can be combined and abstracted, which would make for a smaller and easier-to-manage project.</p>
+            <p>I also took a procedural approach to development, as opposed to an object-oriented approach.  That's worth a refactor if the app is to be applied to any object-oriented projects out there.</p>
+        </div>
+    </riv>
+</div>
+
+</body>
+</html>
