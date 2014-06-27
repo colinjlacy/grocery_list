@@ -8,10 +8,10 @@ angular.module("grocery")
                 method: "GET"
             })
                 .success(function(response) {
-                    $$rootScope.lists = response;
+                    $rootScope.lists = response;
 
-                    for(var i = 0; i < $$rootScope.lists.length; i++) {
-                        $$rootScope.lists[i].urlencode = encodeURIComponent($$rootScope.lists[i].title);
+                    for(var i = 0; i < $rootScope.lists.length; i++) {
+                        $rootScope.lists[i].urlencode = encodeURIComponent($rootScope.lists[i].title);
                     }
 
                     if(response.length > 0) {
@@ -35,8 +35,8 @@ angular.module("grocery")
                 data: id
             })
                 .success(function(data) {
-                    $$rootScope.lists.splice(index, 1);
-                    if ($$rootScope.lists.length == 0) {
+                    $rootScope.lists.splice(index, 1);
+                    if ($rootScope.lists.length == 0) {
                         $scope.hasLists = false;
                     }
                 });
@@ -81,7 +81,7 @@ angular.module("grocery")
                         $scope.add.error = null;
                         add.id = data;
                         add.urlencode = encodeURIComponent(add.title);
-                        $$rootScope.lists.push(add);
+                        $rootScope.lists.push(add);
                         $scope.hasLists = true;
                         $scope.add = {};
                         $location.path('/');
