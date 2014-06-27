@@ -64,7 +64,8 @@ class Login {
         } else {
 
             // return the ID of the inserted row
-            $user_id = mysqli_insert_id($con);
+            $row = mysqli_fetch_assoc($retval);
+            $user_id = $row['id'];
 
             $this->setLogin($user_id, $username);
 
