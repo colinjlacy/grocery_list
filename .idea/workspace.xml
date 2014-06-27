@@ -82,10 +82,10 @@
       <file leaf-file-name="delete_list.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/delete_list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="50" selection-start="369" selection-end="369" vertical-scroll-proportion="-0.19261637" vertical-offset="375" max-vertical-offset="1035">
+            <state line="63" column="0" selection-start="1502" selection-end="1502" vertical-scroll-proportion="1.235955" vertical-offset="175" max-vertical-offset="1035">
               <folding>
-                <marker date="1403835748000" expanded="true" signature="631:698" placeholder="DELETE FROM ..." />
-                <marker date="1403835748000" expanded="true" signature="1050:1094" placeholder="DELETE FROM ..." />
+                <marker date="1403835825000" expanded="true" signature="633:700" placeholder="DELETE FROM ..." />
+                <marker date="1403835825000" expanded="true" signature="1053:1097" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
@@ -299,6 +299,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2668919" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.111821085" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -309,7 +310,6 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32983682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Runner" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -632,7 +632,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/log.log">
+    <entry file="file://$PROJECT_DIR$/log.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="623">
           <folding />
@@ -657,10 +657,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/delete_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="50" selection-start="369" selection-end="369" vertical-scroll-proportion="-0.19261637" vertical-offset="375" max-vertical-offset="1035">
+        <state line="63" column="0" selection-start="1502" selection-end="1502" vertical-scroll-proportion="1.235955" vertical-offset="175" max-vertical-offset="1035">
           <folding>
-            <marker date="1403835748000" expanded="true" signature="631:698" placeholder="DELETE FROM ..." />
-            <marker date="1403835748000" expanded="true" signature="1050:1094" placeholder="DELETE FROM ..." />
+            <marker date="1403835825000" expanded="true" signature="633:700" placeholder="DELETE FROM ..." />
+            <marker date="1403835825000" expanded="true" signature="1053:1097" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
