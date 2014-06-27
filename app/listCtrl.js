@@ -1,9 +1,6 @@
 angular.module("grocery")
-    .controller("listCtrl", function($scope, $http, $location, $route, userId, rootUrl, path) {
+    .controller("listCtrl", function($scope, $http, $location, $route, userId) {
         // the initial function that pulls lists from the database on load
-
-        $scope.rootUrl = rootUrl;
-        $scope.path = path;
 
         var init = function() {
             $http({
