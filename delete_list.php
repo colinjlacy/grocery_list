@@ -52,8 +52,4 @@ if(!$itemval) {
     // let somebody know
     die('Could not delete items: ' . mysqli_error($con));
 
-} else {
-
-    echo "That should have worked!";
-
 };

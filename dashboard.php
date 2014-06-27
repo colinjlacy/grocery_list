@@ -28,7 +28,9 @@
     <script src="app/listCtrl.js"></script>
     <script src="app/viewCtrl.js"></script>
     <script>
-            angular.module("grocery").value("userId", <?php echo $_SESSION['user_loggedin']; ?>)
+            angular.module("grocery").value("userId", "<?php echo $_SESSION['user_loggedin']; ?>")
+                .value("rootUrl", "<?php echo "http://". $_SERVER['SERVER_NAME']; ?>")
+                .value("path", "/sandbox/colin/grocery_list/");
     </script>
 
 </head>

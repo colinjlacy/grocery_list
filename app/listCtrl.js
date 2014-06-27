@@ -1,5 +1,5 @@
 angular.module("grocery")
-    .controller("listCtrl", function($scope, $http, $location, $route, userId) {
+    .controller("listCtrl", function($scope, $http, $location, $route, userId, rootUrl, path) {
         // the initial function that pulls lists from the database on load
         var init = function() {
             $http({
@@ -26,7 +26,7 @@ angular.module("grocery")
 
         // the function that allows users to delete lists from the database
         $scope.deleteList = function(id, index) {
-            var url = 'http://dingwall.highlandgroupinc.com/sandbox/colin/grocery_list/delete_list.php';
+            var url = '{{rootUrl}}{{path}}delete_list.php';
 
             $http({
                 url: url,
@@ -67,7 +67,7 @@ angular.module("grocery")
         $scope.save = function() {
             $scope.add.userId = userId;
             var add = $scope.add;
-            var url = 'http://dingwall.highlandgroupinc.com/sandbox/colin/grocery_list/add_list.php';
+            var url = '{{rootUrl}}{{path}}add_list.php';
 
             $http({
                 url: url,
