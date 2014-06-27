@@ -13,7 +13,7 @@
 <html ng-app="grocery">
 <head>
     <title></title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="angular/angular.js"></script>
     <script src="angular/angular-route.js"></script>
     <script src="angular/angular-resource.js"></script>
