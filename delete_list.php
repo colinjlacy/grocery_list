@@ -2,7 +2,7 @@
 session_start();
 
 if(!($_SESSION['user_loggedin'])) {
-    header('Location: /sandbox/colin/');
+    header('Location: /');
 } else {
     $user_id = $_SESSION['user_loggedin'];
 }

@@ -17,7 +17,7 @@ if (count($register->checkInputLength($username, $password)) > 0) {
 
     // Should auth fail, send them back to the index
     $_SESSION['error_message'] = "<p>You need to enter both a Username and a Password</p>";
-    header('Location: /sandbox/colin/index.php');
+    header('Location: /');
 
 }
 
@@ -25,7 +25,7 @@ if ($register->validatePassword($password, $verify) == false) {
 
     // Should auth fail, send them back to the index
     $_SESSION['error_message'] = "<p>Your Password Verification doesn't match</p>";
-    header('Location: /sandbox/colin/index.php');
+    header('Location: /');
 
 }
 
@@ -39,7 +39,7 @@ if (count($validate) > 0) {
         $_SESSION['error_message'] .= "<li>$field</li>";
     }
     $_SESSION['error_message'] .= "</ul>";
-    header('Location: /sandbox/colin/index.php');
+    header('Location: /');
 
 }
 

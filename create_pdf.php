@@ -4,7 +4,7 @@ session_start();
 // Check that the user is logged in
 if (!(isset($_SESSION['user_loggedin']))) {
 
-    header('Location: /sandbox/colin/');
+    header('Location: /');
 }
 
 // Include the main TCPDF library.
