@@ -1,5 +1,6 @@
 <?php
 session_start();
+file_put_contents('log.txt', "LOG", FILE_APPEND);
 
 if(!($_SESSION['user_loggedin'])) {
     file_put_contents('log.txt', "dying at the session validation", FILE_APPEND);
