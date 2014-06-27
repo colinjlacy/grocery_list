@@ -10,8 +10,6 @@ if(!($_SESSION['user_loggedin'])) {
 // get the information passed from the app via the POST method
 $_POST = json_decode(file_get_contents("php://input"), true);
 
-echo $_POST;
-
 $id = $_POST;
 
 // retrieve the database info
@@ -19,6 +17,8 @@ include("inc/db.inc");
 
 // if no db connection info, then you can't connect
 if(!$con) {
+
+    file_put_contents('log.log', "no connection", FILE_APPEND);
 
     // let somebody know
     die('Could not connect: ' . mysqli_error($con));
@@ -34,7 +34,8 @@ $retval = mysqli_query($con, $list_sql);
 // if no returned object
 if(!$retval) {
 
-    echo "BAD!";
+    file_put_contents('log.log', "list sql query returned negative", FILE_APPEND);
+
     // let somebody know
     die('Could not delete list: ' . mysqli_error($con));
 
@@ -49,7 +50,12 @@ $itemval = mysqli_query($con, $item_sql);
 // if no returned object
 if(!$itemval) {
 
+    file_put_contents('log.log', "item sql query returned negative", FILE_APPEND);
     // let somebody know
     die('Could not delete items: ' . mysqli_error($con));
+
+} else {
+
+    file_put_contents('log.log', "item sql query returned positive", FILE_APPEND);
 
 };
