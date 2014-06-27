@@ -23,7 +23,7 @@
                 </h2>
             </div>
             <div class="col-sm-2 col-sm-push-2 text-right">
-                <a class="btn btn-primary" href="/sandbox/colin/grocery_list/dashboard.php#/add-new">Add New List</a>
+                <a class="btn btn-primary" href="{{path}}/add-new">Add New List</a>
             </div>
         </div>
         <div class="row hidden-xs">
@@ -47,7 +47,7 @@
                         <p>{{list.title}}</p>
                     </div>
                     <div class="col-sm-3 text-right">
-                        <a class="btn btn-default fa fa-list-ul" href="/{{list.id}}"></a>
+                        <a class="btn btn-default fa fa-list-ul" href="{{path}}/{{list.id}}"></a>
                         <a class="btn btn-default fa fa-print" target="_blank" href="create_pdf.php?id={{list.id}}&title={{list.urlencode}}"></a>
                         <button class="btn btn-default fa fa-trash-o" ng-click="deleteList(list.id, $index)"></button>
                     </div>
