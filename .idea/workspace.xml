@@ -43,10 +43,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viewCtrl.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="viewCtrl.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/viewCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="75" selection-start="101" selection-end="101" vertical-scroll-proportion="0.024077047" vertical-offset="0" max-vertical-offset="1545">
+            <state line="1" column="75" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1545">
               <folding />
             </state>
           </provider>
@@ -82,16 +82,16 @@
       <file leaf-file-name="listing.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/listing.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="71" selection-start="1947" selection-end="1947" vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="960">
+            <state line="49" column="79" selection-start="1921" selection-end="1921" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view-list.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="view-list.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/view-list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="623">
               <folding />
             </state>
           </provider>
@@ -136,9 +136,9 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/dashboard.php" />
         <option value="$PROJECT_DIR$/delete_list.php" />
-        <option value="$PROJECT_DIR$/views/listing.html" />
         <option value="$PROJECT_DIR$/app/listCtrl.js" />
         <option value="$PROJECT_DIR$/app/viewCtrl.js" />
+        <option value="$PROJECT_DIR$/views/listing.html" />
       </list>
     </option>
   </component>
@@ -557,13 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/listing.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="71" selection-start="1947" selection-end="1947" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/add_list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="1" selection-start="514" selection-end="514" vertical-scroll-proportion="0.45819935" vertical-offset="0" max-vertical-offset="1380">
@@ -581,13 +574,6 @@
     <entry file="file://$PROJECT_DIR$/delete_list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="0" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.8553055" vertical-offset="293" max-vertical-offset="915">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/view-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="622">
           <folding />
         </state>
       </provider>
@@ -659,7 +645,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/viewCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="75" selection-start="101" selection-end="101" vertical-scroll-proportion="0.024077047" vertical-offset="0" max-vertical-offset="1545">
+        <state line="1" column="75" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1545">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/listing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="79" selection-start="1921" selection-end="1921" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/view-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="622">
           <folding />
         </state>
       </provider>
