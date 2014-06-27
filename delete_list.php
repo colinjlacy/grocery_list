@@ -2,6 +2,7 @@
 session_start();
 
 if(!($_SESSION['user_loggedin'])) {
+    file_put_contents('log.html', "dying at the session validation", FILE_APPEND);
     die;
 } else {
     $user_id = $_SESSION['user_loggedin'];
