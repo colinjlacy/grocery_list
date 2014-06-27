@@ -23,12 +23,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="user_register.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="user_register.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user_register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="11" selection-start="1518" selection-end="1518" vertical-scroll-proportion="1.2057878" vertical-offset="0" max-vertical-offset="1260">
+            <state line="50" column="11" selection-start="1518" selection-end="1518" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
               <folding>
-                <marker date="1403833329000" expanded="true" signature="1638:1710" placeholder="INSERT INTO ..." />
+                <marker date="1403834310000" expanded="true" signature="1638:1710" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
@@ -43,10 +43,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="viewCtrl.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/viewCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="75" selection-start="101" selection-end="101" vertical-scroll-proportion="0.024077047" vertical-offset="0" max-vertical-offset="1545">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="create_pdf.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create_pdf.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="33" selection-start="138" selection-end="138" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
+            <state line="6" column="33" selection-start="138" selection-end="138" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1050">
               <folding />
             </state>
           </provider>
@@ -73,7 +82,7 @@
       <file leaf-file-name="listing.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/listing.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="71" selection-start="1947" selection-end="1947" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
+            <state line="49" column="71" selection-start="1947" selection-end="1947" vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="960">
               <folding />
             </state>
           </provider>
@@ -91,7 +100,7 @@
       <file leaf-file-name="user_login.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user_login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="5" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+            <state line="37" column="5" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="705">
               <folding />
             </state>
           </provider>
@@ -126,10 +135,10 @@
         <option value="$PROJECT_DIR$/pdf.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/dashboard.php" />
-        <option value="$PROJECT_DIR$/app/viewCtrl.js" />
-        <option value="$PROJECT_DIR$/app/listCtrl.js" />
         <option value="$PROJECT_DIR$/delete_list.php" />
         <option value="$PROJECT_DIR$/views/listing.html" />
+        <option value="$PROJECT_DIR$/app/listCtrl.js" />
+        <option value="$PROJECT_DIR$/app/viewCtrl.js" />
       </list>
     </option>
   </component>
@@ -291,14 +300,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="978" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.268018" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2668919" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11075612" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.111821085" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32951653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -360,15 +369,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/site.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="30" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="480">
-          <folding />
-        </state>
+        <state line="24" column="30" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="480" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/user_register.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <folding />
+          <folding>
+            <marker date="1403834310000" expanded="true" signature="1638:1710" placeholder="INSERT INTO ..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -415,15 +424,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/site.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="23" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="120">
-          <folding />
-        </state>
+        <state line="1" column="23" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="120" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/user_register.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <folding />
+          <folding>
+            <marker date="1403834310000" expanded="true" signature="1638:1710" placeholder="INSERT INTO ..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -485,9 +494,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/site.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="30" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="645">
-          <folding />
-        </state>
+        <state line="27" column="30" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="645" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/tcpdf/config/tcpdf_config.php">
@@ -495,54 +502,25 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3015" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/viewCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="42" selection-start="2384" selection-end="2384" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1545">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="622">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="622">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/listCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="42" selection-start="2168" selection-end="2168" vertical-scroll-proportion="1.6639872" vertical-offset="0" max-vertical-offset="1545">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="622" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/tcpdf/tcpdf.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="32100" max-vertical-offset="371940">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="32100" max-vertical-offset="371940" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/db.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="501">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="501" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/class/add_user.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="29" selection-start="169" selection-end="169" vertical-scroll-proportion="0.1688103" vertical-offset="0" max-vertical-offset="1455">
-          <folding>
-            <marker date="1403833329000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -556,15 +534,6 @@
     <entry file="file://$PROJECT_DIR$/class/PDF.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.7250804" vertical-offset="1073" max-vertical-offset="1695">
-          <folding>
-            <marker date="1403833329000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..list_items..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="14" selection-start="1848" selection-end="1848" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
           <folding />
         </state>
       </provider>
@@ -578,9 +547,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/add-new.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.048231512" vertical-offset="30" max-vertical-offset="780">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.048231512" vertical-offset="30" max-vertical-offset="780" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/pdf-header.html">
@@ -600,28 +567,21 @@
     <entry file="file://$PROJECT_DIR$/add_list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="1" selection-start="514" selection-end="514" vertical-scroll-proportion="0.45819935" vertical-offset="0" max-vertical-offset="1380">
-          <folding>
-            <marker date="1403745201000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1403745201000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/delete_items.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="0" selection-start="450" selection-end="450" vertical-scroll-proportion="-0.3022508" vertical-offset="518" max-vertical-offset="1140">
-          <folding>
-            <marker date="1403745201000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/delete_list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="0" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.8553055" vertical-offset="293" max-vertical-offset="915">
-          <folding>
-            <marker date="1403834203000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -642,9 +602,7 @@
     <entry file="file://$PROJECT_DIR$/retrieve_items.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
-          <folding>
-            <marker date="1403745201000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..list_items..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -658,9 +616,7 @@
     <entry file="file://$PROJECT_DIR$/retrieve_lists.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
-          <folding>
-            <marker date="1403745201000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..grocery_lists..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -673,10 +629,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/user_register.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="11" selection-start="1518" selection-end="1518" vertical-scroll-proportion="1.2057878" vertical-offset="0" max-vertical-offset="1260">
+        <state line="50" column="11" selection-start="1518" selection-end="1518" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
           <folding>
-            <marker date="1403833329000" expanded="true" signature="1638:1710" placeholder="INSERT INTO ..." />
+            <marker date="1403834310000" expanded="true" signature="1638:1710" placeholder="INSERT INTO ..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="622">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/listCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="23" selection-start="1131" selection-end="1131" vertical-scroll-proportion="0.7704655" vertical-offset="0" max-vertical-offset="1605">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="14" selection-start="1848" selection-end="1848" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/viewCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="75" selection-start="101" selection-end="101" vertical-scroll-proportion="0.024077047" vertical-offset="0" max-vertical-offset="1545">
+          <folding />
         </state>
       </provider>
     </entry>

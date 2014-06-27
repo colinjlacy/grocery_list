@@ -1,5 +1,5 @@
 angular.module("grocery")
-    .controller("viewCtrl", function($scope, $http, $routeParams, $location, rootUrl, path) {
+    .controller("viewCtrl", function($scope, $http, $routeParams, $location) {
 
         var getList = function(id) {
             for (var i = 0; i < $scope.lists.length; i++) {
@@ -59,7 +59,7 @@ angular.module("grocery")
             console.log(doneArray);
 
             $http({
-                url: '{{rootUrl}}{{path}}delete_items.php',
+                url: 'delete_items.php',
                 method: "POST",
                 data: doneArray
             })
@@ -71,7 +71,7 @@ angular.module("grocery")
 
         // the function that allows users to delete lists from the database
         $scope.deleteList = function(id) {
-            var url = '{{rootUrl}}{{path}}delete_list.php';
+            var url = 'delete_list.php';
 
             $http({
                 url: url,

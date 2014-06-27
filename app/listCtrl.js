@@ -1,6 +1,10 @@
 angular.module("grocery")
     .controller("listCtrl", function($scope, $http, $location, $route, userId, rootUrl, path) {
         // the initial function that pulls lists from the database on load
+
+        $scope.rootUrl = rootUrl;
+        $scope.path = path;
+
         var init = function() {
             $http({
                 url: "retrieve_lists.php",
@@ -26,7 +30,7 @@ angular.module("grocery")
 
         // the function that allows users to delete lists from the database
         $scope.deleteList = function(id, index) {
-            var url = '{{rootUrl}}{{path}}delete_list.php';
+            var url = 'delete_list.php';
 
             $http({
                 url: url,
@@ -67,7 +71,7 @@ angular.module("grocery")
         $scope.save = function() {
             $scope.add.userId = userId;
             var add = $scope.add;
-            var url = '{{rootUrl}}{{path}}add_list.php';
+            var url = 'add_list.php';
 
             $http({
                 url: url,
